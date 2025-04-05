@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@media (max-width: 990px) {
+    .hide-below-991 {
+      display: none;
+    }
+  }
+
+  .div-with-before::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    height: 18px;
+    width: 1px;
+    background-color: #afafaf;
+  }

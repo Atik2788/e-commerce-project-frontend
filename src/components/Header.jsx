@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaLock, FaSquarePhone, FaUser } from "react-icons/fa6";
+import React, { useState } from 'react';
+import { FaList, FaLock, FaSquarePhone, FaUser } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaFacebook, FaTwitter, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 import { MdOutlineArrowDropDown } from "react-icons/md"; 
@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => { 
 
+    const [showSidebar, setShowSidebar] = useState(true)
     const user = true;
 
     return (
@@ -63,6 +64,23 @@ const Header = () => {
                     </div> 
                 </div>
             </div>
+
+            
+            <div className="w-white">
+                <div className="w-[85%] lg:w-[90%] mx-auto ">
+                    <div className="h-[80px] md:h-[100px] flex justify-between items-center flex-wrap">
+                        <Link to='/'>
+                         <img src="http://localhost:5173/images/logo.png" alt="" />
+                        </Link> 
+                        <div className="justify-center items-center w-[30px] h-[30px] bg-white text-slate-600 border border-slate-600 rounded-sm cursor-pointer lg:hidden xl:hidden hidden  mdflex"
+                        onClick={() => setShowSidebar(false)}>
+                            <span><FaList/></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+ 
         </div>
     );
 };

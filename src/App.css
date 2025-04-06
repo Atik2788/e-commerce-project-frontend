@@ -6,6 +6,12 @@
     }
   }
 
+@media (max-width: 990px) {
+    .mdflex {
+      display: flex;
+    }
+  }
+
   .div-with-before::before {
     content: "";
     position: absolute;
